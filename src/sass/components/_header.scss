@@ -1,0 +1,254 @@
+.page-header {
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.page-header__container {
+  @media screen and (min-width: 768px) {
+    min-width: 768px;
+    height: 87px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    min-width: 1280px;
+  }
+
+  position: relative;
+  top: 0;
+  left: 0;
+  min-width: 320px;
+  height: 62px;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.page-header__logo {
+  @media screen and (min-width: 768px) {
+    padding-top: 37px;
+    padding-bottom: 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    position: absolute;
+    top: 37px;
+    left: 46px;
+    padding: 0;
+  }
+  display: inline-flex;
+  align-items: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.icon-logo {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+}
+
+.text-logo {
+  @include text(Titan One, 26px, 400, 1.15, 0.04em);
+  color: getColor('accent');
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+
+.nav {
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    padding-left: 355px;
+  }
+}
+
+.nav__list {
+  @include text(DM Sans, 16px, 700, 1.31, null);
+
+  &:not(last-child) {
+    padding-right: 35px;
+  }
+}
+
+.nav__link {
+  @include transition(color, null);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  color: getColor('primary');
+
+  &--current {
+    color: getColor('accent');
+  }
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
+}
+
+.page-header__btn {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 767px) {
+    position: absolute;
+    top: 38px;
+    right: 34px;
+    width: auto;
+  }
+
+  @media screen and (min-width: 1280px) {
+    position: absolute;
+    top: 38px;
+    right: 115px;
+  }
+}
+
+.btn.menu-container__btn {
+  width: calc(100% - 2*20px);
+  margin: 0 auto 19px auto;
+}
+
+.menu-container {
+  @media screen and (min-width: 480px) {
+    width: 350px;
+  }
+
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 350px;
+    z-index: 99;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+
+  @include transition(transform, null);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 60px 0;
+  background-color: getColor('bg-burger');
+
+  transform: translateX(100%);
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-icon__burger {
+  @include transition(fill, stroke);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  fill: getColor('accent');
+  stroke: getColor('accent');
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: getColor('primary');
+    stroke: getColor('primary');
+  }
+}
+
+.menu-icon {
+  @include transition(fill, stroke);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  fill: getColor('primary');
+  stroke: getColor('primary');
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: getColor('accent');
+    stroke: getColor('accent');
+  }
+}
+
+.menu-toggle__header {
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 52px;
+    right: 224px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+  position: absolute;
+  top: 23px;
+  right: 28px;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+
+.menu-toggle--mobile-menu {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+.nav-menu__list {
+  left: 0;
+  display: block;
+  width: 100%;
+  border-top: 1px solid getColor('border-burger');
+
+  &:last-child {
+    border-bottom: 1px solid getColor('border-burger');
+  }
+}
+
+.nav-menu__list {
+  @include text(DM Sans, 14px, 700, 1.29, null);
+}
+
+.nav-menu__link {
+  @include transition(color, null);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  color: getColor('primary');
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
+}
+
+.nav-menu__link--current {
+  color: getColor('accent');
+}

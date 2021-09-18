@@ -1,0 +1,58 @@
+<header class="page-header">
+    <div class="container page-header__container">
+        <a href="" class="page-header__logo">
+            <img class="icon-logo" src="images/logo.png" alt="logo" width="50" height="50" />
+            <span class="text-logo">Icecream</span>
+        </a>
+
+            <nav class="page-header__nav">
+                <ul class="nav">
+                    <li class="nav__list"><a href="#" class="nav__link nav__link--current">Home</a></li>
+                    <li class="nav__list"><a href="#slider" class="nav__link">About us</a></li>
+                    <li class="nav__list"><a href="#made" class="nav__link">How it’s made?</a></li>
+                    <li class="nav__list"><a href="#products" class="nav__link">Our products</a></li>
+                    <li class="nav__list"><a href="#contacts" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button type="button" class="btn page-header__btn" data-modal-open>Buy now
+                <svg class="btn__icon" width="8" height="8">
+                    <use href="images/icons.svg#bracket"></use>
+                </svg>
+                <svg class="btn__icecream" width="32" height="32">
+                    <use href="images/icons.svg#icecream"></use>
+                </svg>
+            </button>
+        
+        <button class="menu-toggle menu-toggle__header js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="menu-icon__burger" width="20" height="12">
+                <use href="./images/icons.svg#burger"></use>
+            </svg>
+        </button>
+
+        <div class="menu-container is-op js-menu-container" id="mobile-menu">
+            <button class="menu-toggle menu-toggle--mobile-menu js-close-menu">
+                <svg class="menu-icon" width="14" height="14">
+                    <use href="images/icons.svg#close"></use>
+                </svg>
+            </button>
+
+            <button type="button" class="btn menu-container__btn" data-modalmob-open>Buy now
+                <svg class="btn__icon" width="8" height="8">
+                    <use href="images/icons.svg#bracket"></use>
+                </svg>
+                <svg class="btn__icecream" width="32" height="32">
+                    <use href="images/icons.svg#icecream"></use>
+                </svg>
+            </button>
+
+            <ul class="nav-menu">
+                <li class="nav-menu__list"><a href="#" class="nav-menu__link nav-menu__link--current">Home</a></li>
+                <li class="nav-menu__list"><a href="#slider" class="nav-menu__link" id="mobile-menu__slider">About us</a></li>
+                <li class="nav-menu__list"><a href="#made" class="nav-menu__link" id="mobile-menu__made">How it’s made?</a></li>
+                <li class="nav-menu__list"><a href="#products" class="nav-menu__link" id="mobile-menu__products">Our products</a></li>
+                <li class="nav-menu__list"><a href="#contacts" class="nav-menu__link" id="mobile-menu__contacts">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>

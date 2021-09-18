@@ -1,0 +1,92 @@
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &--products {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+  }
+
+  &--made {
+    padding-top: 100px;
+    padding-bottom: 0;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 120px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      padding-top: 140px;
+    }
+  }
+
+  &--advantages {
+    background-color: getColor('bg-page');
+  }
+
+  &--contacts {
+    background-image: linear-gradient(getColor('primary') 100px, getColor('bg-page') 100px);
+  }
+
+  &__lable-title {
+    @include text(Titan One, 18px, 400, 1.17, null);
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: getColor('secondary');
+
+    @media screen and (min-width: 768px) {
+      @include text(Titan One, 26px, 400, 1.15, null);
+    }
+
+    @media screen and (min-width: 1280px) {
+      @include text(Titan One, 30px, 400, 1.13, null);
+    }
+
+    &--visually-hidden {
+      @extend %visually-hidden;
+    }
+  }
+
+  &__title {
+    @include text(Titan One, 34px, 400, 1.15, 00.04em);
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: getColor('accent');
+
+    @media screen and (min-width: 768px) {
+      @include text(Titan One, 48px, 400, 1.15, null);
+    }
+
+    @media screen and (min-width: 1280px) {
+      @include text(Titan One, 58px, 400, 1.14, null);
+    }
+
+    &--visually-hidden {
+      @extend %visually-hidden;
+    }
+  }
+}
